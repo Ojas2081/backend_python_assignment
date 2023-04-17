@@ -1,0 +1,59 @@
+1. Create a virtual environment.
+
+virtualenv -p /usr/bin/python3.8 venv
+
+2. Activate the virtual environment.
+
+source venv/bin/activate
+
+3. After activating the virtual environment, install django
+
+pip install Django
+
+Django official website
+
+#https://docs.djangoproject.com/en/4.1/intro/tutorial01/
+
+4. Creating a project
+
+django-admin startproject posts
+
+5. Install requirements.
+
+Go inside the project folder and create requirments.txt file.
+
+pip install -r requirements.txt
+
+6. Connect the project to a database (settings.py) there is env file
+
+7. Do Migrations
+
+# This will create tables in the database, which are provided by django
+
+python manage.py migrate
+
+8. Create a Superuser.
+
+# Superuser is the one who has access to all the tables in database.
+
+python manage.py createsuperuser
+
+9. Creating an app
+
+# First go inside project directory and then create app, and then mention that app in the installed apps.
+
+python manage.py startapp core
+
+10. Make models, and do makemigrations and then migrate.
+
+-> python manage.py makemigrations
+
+-> python manage.py migrate
+
+11. Register the models in the admin.py file to see in admin.
+
+12. Write Views in the views.py file.
+
+13. Create a urls.py file and connect the view to url.
+
+14. Include those urls with project urls.
